@@ -1,6 +1,6 @@
 # MakeMKV Docker
 
-A Docker container for running MakeMKV, a tool for converting DVD/Blu-ray content to MKV files.
+A Docker container for running MakeMKV CLI, a tool for converting DVD/Blu-ray content to MKV files.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ A Docker container for running MakeMKV, a tool for converting DVD/Blu-ray conten
 docker-compose build
 ```
 
-This will create a Docker image with MakeMKV v1.18.1 installed.
+This will create a Docker image with MakeMKV CLI v1.18.1 installed.
 
 ## Usage
 
@@ -73,22 +73,6 @@ If you prefer to use MakeMKV directly with docker-compose commands:
   ```bash
   docker-compose run --rm makemkv -r mkv /input/MOVIE_1 0 /output
   ```
-
-### Graphical Interface (Experimental)
-
-To run MakeMKV with GUI support, you need to allow Docker to access your X server:
-
-1. Allow local X connections:
-   ```bash
-   xhost +local:docker
-   ```
-
-2. Uncomment the GUI-related lines in `docker-compose.yml`
-
-3. Run:
-   ```bash
-   docker-compose run --rm makemkv
-   ```
 
 ## Customization
 
