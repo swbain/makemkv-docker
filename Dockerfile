@@ -20,23 +20,20 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /tmp
 
-# Set MakeMKV version
-ENV MAKEMKV_VERSION=1.18.1
-
 # Download MakeMKV source packages
 RUN wget https://www.makemkv.com/download/makemkv-bin-1.18.1.tar.gz && \
     wget https://www.makemkv.com/download/makemkv-oss-1.18.1.tar.gz && \
-    tar -xzf makemkv-oss-${MAKEMKV_VERSION}.tar.gz && \
-    tar -xzf makemkv-bin-${MAKEMKV_VERSION}.tar.gz
+    tar -xzf makemkv-oss-1.18.1.tar.gz && \
+    tar -xzf makemkv-bin-1.18.1.tar.gz
 
 # Build and install MakeMKV OSS package
-WORKDIR /tmp/makemkv-oss-${MAKEMKV_VERSION}
+WORKDIR /tmp/makemkv-oss-1.18.1
 RUN ./configure && \
     make && \
     make install
 
 # Build and install MakeMKV BIN package
-WORKDIR /tmp/makemkv-bin-${MAKEMKV_VERSION}
+WORKDIR /tmp/makemkv-bin-1.18.1
 RUN make && \
     make install
 

@@ -92,7 +92,9 @@ To run MakeMKV with GUI support, you need to allow Docker to access your X serve
 
 ## Customization
 
-You can modify the MakeMKV version by changing the `MAKEMKV_VERSION` environment variable in the Dockerfile.
+To use a different MakeMKV version, edit the Dockerfile and change all occurrences of the version number (currently 1.18.1). You'll need to update:
+1. The download URLs
+2. The extracted folder paths
 
 ## Troubleshooting
 
