@@ -37,7 +37,7 @@ fi
 
 # First, show disc info
 echo "Getting information from $SOURCE_FOLDER..."
-docker-compose run --rm makemkv -r info "$SOURCE_PATH"
+docker compose run --rm makemkv -r info "$SOURCE_PATH"
 
 # Confirm conversion
 read -p "Do you want to continue converting $TITLE title(s)? (y/n): " CONFIRM
@@ -48,6 +48,6 @@ fi
 
 # Start conversion
 echo "Converting $TITLE title(s) from $SOURCE_FOLDER to output/ directory..."
-docker-compose run --rm makemkv -r mkv "$SOURCE_PATH" "$TITLE" /output
+docker compose run --rm makemkv -r mkv "$SOURCE_PATH" "$TITLE" /output
 
 echo "Conversion complete. Check output/ directory for your files." 
