@@ -24,8 +24,8 @@ WORKDIR /tmp
 ENV MAKEMKV_VERSION=1.18.1
 
 # Download MakeMKV source packages
-RUN wget https://www.makemkv.com/download/makemkv-bin-${MAKEMKV_VERSION}.tar.gz && \
-    wget https://www.makemkv.com/download/makemkv-oss-${MAKEMKV_VERSION}.tar.gz && \
+RUN wget https://www.makemkv.com/download/makemkv-bin-1.18.1.tar.gz && \
+    wget https://www.makemkv.com/download/makemkv-oss-1.18.1.tar.gz && \
     tar -xzf makemkv-oss-${MAKEMKV_VERSION}.tar.gz && \
     tar -xzf makemkv-bin-${MAKEMKV_VERSION}.tar.gz
 
