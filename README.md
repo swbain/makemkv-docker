@@ -28,7 +28,7 @@ A Docker container for running MakeMKV CLI, a tool for converting DVD/Blu-ray co
 ## Building the Container
 
 ```bash
-docker-compose build
+docker compose build
 ```
 
 This will create a Docker image with MakeMKV CLI v1.18.1 installed.
