@@ -1,0 +1,20 @@
+# Input and output directories
+input/
+output/
+
+# Generated files
+*.mkv
+*.VOB
+*.IFO
+*.BUP
+
+# Docker related
+.env
+
+# IDE/Editor folders
+.idea/
+.vscode/
+
+# OS specific files
+.DS_Store
+Thumbs.db 
