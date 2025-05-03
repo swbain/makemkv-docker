@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     qtbase5-dev \
     zlib1g-dev \
     wget \
+    less \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -34,7 +35,7 @@ RUN ./configure && \
 
 # Build and install MakeMKV BIN package
 WORKDIR /tmp/makemkv-bin-1.18.1
-RUN make && \
+RUN echo "yes" | make && \
     make install
 
 # Clean up build artifacts
