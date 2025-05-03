@@ -61,17 +61,17 @@ If you prefer to use MakeMKV directly with docker-compose commands:
 
 - Show video source information:
   ```bash
-  docker-compose run --rm makemkv -r info /input/MOVIE_1
+  docker compose run --rm makemkv -r info /input/MOVIE_1
   ```
 
 - Convert all titles:
   ```bash
-  docker-compose run --rm makemkv -r mkv /input/MOVIE_1 all /output
+  docker compose run --rm makemkv -r mkv /input/MOVIE_1 all /output
   ```
 
 - Convert specific title (e.g., title 0):
   ```bash
-  docker-compose run --rm makemkv -r mkv /input/MOVIE_1 0 /output
+  docker compose run --rm makemkv -r mkv /input/MOVIE_1 0 /output
   ```
 
 ## Customization
